@@ -37,7 +37,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-200"
-            alt="github-link"
+            aria-label="GitHub profile of Ashwin Dukare"
           >
             <Github className="w-5 h-5" />
           </a>
