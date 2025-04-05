@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
+import HelpTip from "../components/HelpTip";
 
 const inputStyle = `
   w-full px-3 py-2 border border-gray-300 rounded-md 
@@ -88,16 +89,13 @@ export default function FlightTimeBatteryCalculator() {
               <div>
                 <label className="flex items-center gap-2 font-medium mb-1">
                   Total Power Consumption (W)
-                  <div className="relative group">
-                    <span className="text-blue-600 cursor-pointer">ℹ️</span>
-                    <div className="absolute hidden group-hover:block w-64 text-sm text-gray-700 bg-white border border-gray-300 p-3 rounded-md shadow-lg z-10 left-1/2 -translate-x-1/2 bottom-full mb-2">
-                      <ul className="list-disc pl-4 space-y-1">
-                        <li>Divide MTOW by number of motors to get thrust per motor.</li>
-                        <li>Use motor datasheet to find power for that thrust.</li>
-                        <li>Multiply by number of motors for total power.</li>
-                      </ul>
-                    </div>
-                  </div>
+                  <HelpTip>
+                    <ul className="list-disc pl-4 space-y-1">
+                      <li>Divide MTOW by number of motors to get thrust per motor.</li>
+                      <li>Use motor datasheet to find power for that thrust.</li>
+                      <li>Multiply by number of motors for total power.</li>
+                    </ul>
+                  </HelpTip>
                 </label>
                 <input
                   type="number"
@@ -132,4 +130,3 @@ export default function FlightTimeBatteryCalculator() {
     </>
   );
 }
-

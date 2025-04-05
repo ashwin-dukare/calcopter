@@ -4,7 +4,7 @@ import { Github } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-600 text-white pt-6 pb-4">
+    <footer className="bg-blue-700 text-white pt-6 pb-4">
       {/* Footer Grid Layout */}
       <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center sm:text-left items-center">
         {/* Branding + Info */}
@@ -37,6 +37,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-200"
+            alt="github-link"
           >
             <Github className="w-5 h-5" />
           </a>

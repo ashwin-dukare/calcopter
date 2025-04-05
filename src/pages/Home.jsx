@@ -10,18 +10,21 @@ const Home = () => {
       description:
         "Calculate flight time using battery specs (capacity & voltage) and average hover power consumption. Ideal when motor hover wattage is known.",
       link: "/flight-time-battery",
+      image: "/img/im1.png",
     },
     {
       title: "Flight Time – MTOW Based",
       description:
         "Estimate endurance based on max takeoff weight (MTOW), using thrust-to-weight ratio and battery specs. Great for complete builds.",
       link: "/flight-time-mtow",
+      image: "/img/im2.png",
     },
     {
       title: "Flight Time – Motor Based",
       description:
         "Manually input motor power and battery specs to get endurance estimates. Best for custom builds or when using non-standard motors.",
       link: "/flight-time-motor",
+      image: "/img/im3.png",
     },
   ];
 
@@ -62,6 +65,7 @@ const Home = () => {
               title={calc.title}
               description={calc.description}
               link={calc.link}
+              image={calc.image}
             />
           ))}
         </div>

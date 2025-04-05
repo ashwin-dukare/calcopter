@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
+import HelpTip from "../components/HelpTip";
 
 const inputStyle = `
   w-full px-3 py-2 border border-gray-300 rounded-md 
@@ -127,18 +128,16 @@ export default function MTOWBasedCalculator() {
 
               {/* Power per Motor with Tooltip */}
               <div>
-                <label className="flex items-center gap-2 font-medium mb-1">
-                  Power Rating of the Motor (W):
-                  <span className="relative group cursor-pointer text-blue-600">
-                    ℹ️
-                    <div className="absolute hidden group-hover:block text-sm text-gray-800 bg-white border border-gray-300 p-3 rounded shadow-lg w-72 z-10 left-1/2 -translate-x-1/2 bottom-full mb-2">
-                      <ul className="list-disc pl-4 space-y-1">
-                        <li>Use motor datasheet to find power at ~50% throttle.</li>
-                        <li>Total Power = Motor Power × Number of Motors.</li>
-                      </ul>
-                    </div>
-                  </span>
-                </label>
+              <label className="flex items-center gap-2 font-medium mb-1">
+  Power Rating of the Motor (W):
+  <HelpTip>
+    <ul className="list-disc pl-4 space-y-1">
+      <li>Use motor datasheet to find power at ~50% throttle.</li>
+      <li>Total Power = Motor Power × Number of Motors.</li>
+    </ul>
+  </HelpTip>
+</label>
+
                 <input
                   type="number"
                   placeholder="Enter power per motor"
