@@ -33,7 +33,7 @@ const Footer = () => {
         {/* Social */}
         <div className="flex justify-center sm:justify-end space-x-4">
           <a
-            href="https://github.com/ashwindukare"
+            href="https://github.com/ashwin-dukare/calcopter"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-200"
