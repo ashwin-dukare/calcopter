@@ -83,6 +83,8 @@ Images in the project are served in WebP format with different sizes using `srcS
 
 Our project scores **100/100** on Lighthouse, ensuring excellent performance, accessibility, best practices, and SEO.
 
+![Lighthouse Report](./calcopter_lighthouse_report.JPG)
+
 
 ## License
 
