@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 export default function CalculatorCard({ title, description, link, image }) {
+  // Remove the .webp extension to build the resized image paths
+  const imageBase = image ? image.replace(/\.webp$/, "") : "";
+
   return (
     <Link
       to={link}
@@ -12,9 +15,16 @@ export default function CalculatorCard({ title, description, link, image }) {
       {image && (
         <div className="aspect-[16/9] w-full mb-4 overflow-hidden rounded-lg">
           <img
-            src={image}
+            src={`${imageBase}-800.webp`} // default fallback image
+            srcSet={`
+              ${imageBase}-400.webp 400w,
+              ${imageBase}-800.webp 800w,
+              ${imageBase}-1200.webp 1200w
+            `}
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             alt={title}
             className="w-full h-full object-contain"
+            loading="lazy"
           />
         </div>
       )}
