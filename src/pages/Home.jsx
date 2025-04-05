@@ -55,7 +55,10 @@ const Home = () => {
     Each calculator serves a different use case—based on what information you currently have. Battery-based for power data, MTOW-based for complete build estimation, and motor-based for custom setups. Use the one that fits your scenario and plan your builds with confidence.
   </p>
 </div>
-
+<div className="mb-12 bg-gray-50 border border-gray-200 rounded-xl p-6 sm:p-8 shadow-sm">
+<h2 className="text-2xl sm:text-3xl font-semibold text-gray-800 mb-4">
+    Calculators
+  </h2>
 
         {/* 🔢 Calculator Cards */}
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
@@ -69,6 +72,7 @@ const Home = () => {
             />
           ))}
         </div>
+      </div>
       </div>
       <Footer/>
     </>
