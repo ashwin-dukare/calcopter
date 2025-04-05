@@ -34,6 +34,7 @@ const Navbar = () => {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="text-white focus:outline-none"
+            aria-label="Menu"
           >
             <svg
               className="h-6 w-6"

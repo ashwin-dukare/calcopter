@@ -149,6 +149,7 @@ export default function MotorBasedCalculator() {
               <button
                 onClick={calculateEndurance}
                 className="w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md transition duration-200"
+                aria-label="calculate flight time"
               >
                 Calculate Flight Time
               </button>

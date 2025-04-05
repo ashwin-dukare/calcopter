@@ -15,7 +15,7 @@ export default function CalculatorCard({ title, description, link, image }) {
       {image && (
         <div className="aspect-[16/9] w-full mb-4 overflow-hidden rounded-lg">
           <img
-            src={`${imageBase}-800.webp`} // default fallback image
+            src={`${imageBase}-400.webp`} // default fallback image
             srcSet={`
               ${imageBase}-400.webp 400w,
               ${imageBase}-800.webp 800w,

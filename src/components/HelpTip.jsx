@@ -23,6 +23,7 @@ export default function HelpTip({ children }) {
         onClick={() => setShow((prev) => !prev)}
         ref={buttonRef}
         className="text-blue-600 focus:outline-none"
+        aria-label="Open Help Tooltip"
       >
         <Info className="w-4 h-4" />
       </button>
